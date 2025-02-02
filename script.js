@@ -1,44 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gita Wisdom Explorer</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Linking the CSS file -->
-</head>
-<body>
-    <div class="container">
-        <h1>Gita Wisdom Explorer</h1>
-        <p>Click on a concept to see Bhagavad Gita vs. Ashtavakra Gita perspectives.</p>
+body {
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    background-color: #f9f5e8;
+    color: #333;
+    padding: 20px;
+    margin: 0;
+}
 
-        <div class="word-cloud">
-            <span class="word" onclick="showComparison('fear')">Fear</span>
-            <span class="word" onclick="showComparison('ego')">Ego</span>
-            <span class="word" onclick="showComparison('liberation')">Liberation</span>
-            <span class="word" onclick="showComparison('karma')">Karma</span>
-            <span class="word" onclick="showComparison('desire')">Desire</span>
-            <span class="word" onclick="showComparison('detachment')">Detachment</span>
-            <span class="word" onclick="showComparison('self')">Self</span>
-            <span class="word" onclick="showComparison('wisdom')">Wisdom</span>
-            <span class="word" onclick="showComparison('peace')">Peace</span>
-        </div>
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
 
-        <div id="comparison-section" class="hidden">
-            <h2 id="word-title"></h2>
-            <table>
-                <tr>
-                    <th>Concept</th>
-                    <th>Bhagavad Gita</th>
-                    <th>Ashtavakra Gita</th>
-                </tr>
-                <tr>
-                    <td id="concept"></td>
-                    <td id="bhagavad"></td>
-                    <td id="ashtavakra"></td>
-                </tr>
-            </table>
-        </div>
-    </div>
-    <script src="script.js"></script> <!-- Linking the JS file -->
-</body>
-</html>
+h1 {
+    color: #8b4513;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.word-cloud {
+    margin: 25px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.word {
+    display: inline-block;
+    font-size: 20px;
+    padding: 14px 18px;
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.word:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.hidden {
+    display: none;
+}
+
+table {
+    width: 100%;
+    margin-top: 25px;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 14px;
+    text-align: center;
+}
+
+th {
+    background: #8b4513;
+    color: white;
+    font-size: 20px;
+}
+
+td {
+    font-size: 18px;
+    background: #fffaf0;
+}
