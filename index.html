@@ -1,60 +1,44 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f5f5dc;
-    color: #333;
-    padding: 20px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gita Wisdom Explorer</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Linking the CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1>Gita Wisdom Explorer</h1>
+        <p>Click on a concept to see Bhagavad Gita vs. Ashtavakra Gita perspectives.</p>
 
-.container {
-    max-width: 600px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+        <div class="word-cloud">
+            <span class="word" onclick="showComparison('fear')">Fear</span>
+            <span class="word" onclick="showComparison('ego')">Ego</span>
+            <span class="word" onclick="showComparison('liberation')">Liberation</span>
+            <span class="word" onclick="showComparison('karma')">Karma</span>
+            <span class="word" onclick="showComparison('desire')">Desire</span>
+            <span class="word" onclick="showComparison('detachment')">Detachment</span>
+            <span class="word" onclick="showComparison('self')">Self</span>
+            <span class="word" onclick="showComparison('wisdom')">Wisdom</span>
+            <span class="word" onclick="showComparison('peace')">Peace</span>
+        </div>
 
-h1 {
-    color: #b5651d;
-}
-
-.word-cloud {
-    margin: 20px 0;
-}
-
-.word {
-    display: inline-block;
-    font-size: 20px;
-    margin: 10px;
-    padding: 10px;
-    background: #ffa500;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.word:hover {
-    background: #ff4500;
-}
-
-.hidden {
-    display: none;
-}
-
-table {
-    width: 100%;
-    margin-top: 20px;
-    border-collapse: collapse;
-}
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
-}
-
-th {
-    background: #b5651d;
-    color: white;
-}
+        <div id="comparison-section" class="hidden">
+            <h2 id="word-title"></h2>
+            <table>
+                <tr>
+                    <th>Concept</th>
+                    <th>Bhagavad Gita</th>
+                    <th>Ashtavakra Gita</th>
+                </tr>
+                <tr>
+                    <td id="concept"></td>
+                    <td id="bhagavad"></td>
+                    <td id="ashtavakra"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script> <!-- Linking the JS file -->
+</body>
+</html>
