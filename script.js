@@ -83,3 +83,8 @@ td {
     font-size: 20px;
     color: #6d4c41;
 }
+
+audio {
+    margin-top: 10px;
+    width: 100%;
+}
