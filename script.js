@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Sanskrit+2003&family=Merriweather&display=swap');
-
 body {
     font-family: 'Merriweather', serif;
     text-align: center;
